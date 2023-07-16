@@ -1,0 +1,39 @@
+.navbar {
+    background-color:rgb(50, 47, 55);
+  }
+  
+  .navbar .chakra-button {
+    background-color: beige;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar .chakra-button:hover {
+    background-color: transparent;
+  }
+  
+  .navbar .chakra-button[aria-expanded="true"] {
+    background-color: transparent;
+  }
+  
+  .navbar .chakra-button:focus {
+    outline: none;
+  }
+  
+  .navbar .chakra-button:hover > svg {
+    color: gray.300;
+  }
+  
+  .navbar .chakra-badge {
+    font-size: 12px;
+    border-radius: 999px;
+    padding: 2px 6px;
+  }
+  .menu{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .menu .chakra-text {
+    margin-right: 10px;
+  }
