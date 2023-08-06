@@ -38,12 +38,18 @@
     margin-right: 10px;
   }
 
-  .item-list-container {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .greeting {
+    
+    background-image: url('./assets/banner7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 190px;
     text-align: center;
-    font-size: 18px;
-    color: #333;
+    font-size: 28px;
+    color: black;
+  }
+
+  .item-list-container {
+    background-color:rgb(50, 47, 55); /*  */
+    padding: 20px;
   }

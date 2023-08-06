@@ -1,6 +1,5 @@
-import React from 'react';
-import ItemList from './ItemList';
-import { Flex } from '@chakra-ui/react';
+import React from 'react'
+import ItemDetail from './ItemDetail'
 import piedraDiamanteImage from '../assets/diamante-150x150.jpg';
 import piedraEsmeraldaImage from '../assets/esmeralda.jpg';
 import piedraAmazonitaImage from '../assets/Amazonita-pura-200x133.jpg';
@@ -11,12 +10,10 @@ import piedraCalcitaImage from '../assets/calcita.jpg';
 import piedraMalaquitaImage from '../assets/malaquita-200x133.jpg';
 import piedraCristaldeRocaImage from '../assets/CristaldeRoca.jpg';
 import piedraTopacioImage from '../assets/topacio.jpg';
-import { useParams} from 'react-router-dom';
 
 
-const ItemListContainer = () => {
-  const {category}= useParams()
-  {/* Productos moqueados */}
+const ItemDetailContainer = () => {
+{/* Productos mokeados */}
   const productos = [
     {
       id: 1,
@@ -99,9 +96,8 @@ const ItemListContainer = () => {
       category: "psemipreciosas"
     },
   ];
-  
-  
-{/* Me traigo los productos con una promesa */}
+
+  {/* Traigo los productos con una promesa */}
   const getProductos = new Promise ((resolve, reject)=> {
     if (productos.length >0) {
       setTimeout(() => {
@@ -120,22 +116,16 @@ const ItemListContainer = () => {
     console.log(error)
   })
 
-  {/* Filtro los productos por categoría */}
-  const productosFiltrados = productos.filter((producto)=> producto.category === category)
 
   return (
     <>
+     {/* Le paso la info a ItemDetail que es hijo.  Le paso productos que contiene productos */}
+    <ItemDetail
+    productos={productos}
+    />
+    </>
     
-
-{/* le paso info a ItemList mediante props.  se llama productos y tiene los productosFiltrados */}
-    <Flex className='item-list-container'>
-      <ItemList 
-      productos={productosFiltrados}
-      />
-    </Flex>
- 
-  </>
   )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer

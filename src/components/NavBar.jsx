@@ -3,17 +3,20 @@ import { Box, Flex, Text, IconButton, Badge, Menu, MenuButton, MenuList, MenuIte
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import '../index.css';
 import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <Box className="navbar" py={4} px={6}>
       <Flex alignItems="center" justifyContent="space-between">
         <Box>
-          <Text color="white" fontWeight="bold" fontSize="lg">Stone Dark</Text>
+          <Link to={"/"}>
+          <Text color="white" fontWeight="bold" fontSize="2em">Stone Dark</Text>
+          </Link>
         </Box>
         <div className='menu'>
         <Box>
-          <Text color="white" fontWeight="bold" fontSize="lg">Nuestras Piedras</Text>
+          <Text color="white" fontWeight="bold" fontSize="1.5em">Nuestras Piedras</Text>
         </Box>
     
         <Box>
@@ -21,15 +24,29 @@ const NavBar = () => {
             <MenuButton as={IconButton} icon={<ChevronDownIcon />} variant="outline" colorScheme="white" aria-label="Desplegable"> 
             </MenuButton>
             <MenuList>
-              <MenuItem>Item 1</MenuItem>
-              <MenuItem>Item 2</MenuItem>
+              <MenuItem>
+              <Link to={`/category/${"ppreciosas"}`}>
+              Piedras Preciosas
+              </Link>
+              </MenuItem>
+              <MenuItem>
+              <Link to={`/category/${"psemipreciosas"}`}>
+              Piedras Semipreciosas
+              </Link>
+              </MenuItem>
               <MenuItem>Item 3</MenuItem>
             </MenuList>
           </Menu>
         </Box>
         </div>
-        
+
+     
+    <Box>  
+     <Link to={"/Cart"}>
         <CartWidget/>
+     </Link>   
+    </Box> 
+
       </Flex>
     </Box>
   );
