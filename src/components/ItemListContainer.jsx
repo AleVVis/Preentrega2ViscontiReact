@@ -24,7 +24,8 @@ const ItemListContainer = () => {
       descripcion: 'Diamante pulido de alta calidad',
       stock: 10,
       foto: piedraDiamanteImage,
-      category: "ppreciosas"
+      category: "ppreciosas",
+      precio: 1000
     },
     {
       id: 2,
@@ -32,7 +33,8 @@ const ItemListContainer = () => {
       descripcion: 'Famosa debido a su hermoso color verde',
       stock: 5,
       foto: piedraEsmeraldaImage,
-      category: "ppreciosas"
+      category: "ppreciosas",
+      precio: 2000
     },
     {
       id: 3,
@@ -40,7 +42,8 @@ const ItemListContainer = () => {
       descripcion: 'Amazonita pura, perfecto para decoración',
       stock: 15,
       foto: piedraAmazonitaImage,
-      category: "ppreciosas"
+      category: "ppreciosas",
+      precio: 3000
     },
     {
       id: 4,
@@ -48,7 +51,8 @@ const ItemListContainer = () => {
       descripcion: 'Resistencia, durabilidad y color',
       stock: 8,
       foto: piedraZafiroImage,
-      category: "ppreciosas"
+      category: "ppreciosas",
+      precio: 4000
     },
     {
       id: 5,
@@ -56,7 +60,8 @@ const ItemListContainer = () => {
       descripcion: 'Es una roca que aporta valor y confianza.',
       stock: 3,
       foto: piedraAgataImage,
-      category: "psemipreciosas"
+      category: "psemipreciosas",
+      precio: 500
     },
     {
       id: 6,
@@ -64,7 +69,8 @@ const ItemListContainer = () => {
       descripcion: 'Ideal para tallar esculturas y decoración',
       stock: 12,
       foto: piedraCalcitaImage,
-      category: "psemipreciosas"
+      category: "psemipreciosas",
+      precio: 600
     },
     {
       id: 7,
@@ -72,7 +78,8 @@ const ItemListContainer = () => {
       descripcion: 'Ópalo con hermoso juego de colores',
       stock: 20,
       foto: piedraOpaloImage,
-      category: "psemipreciosas"
+      category: "psemipreciosas",
+      precio: 700
     },
     {
       id: 8,
@@ -80,7 +87,8 @@ const ItemListContainer = () => {
       descripcion: 'Decoración, artesanía o joyería. ',
       stock: 6,
       foto: piedraMalaquitaImage,
-      category: "psemipreciosas"
+      category: "psemipreciosas",
+      precio: 800
     },
     {
       id: 9,
@@ -88,7 +96,8 @@ const ItemListContainer = () => {
       descripcion: 'Cristal de roca transparente, excelente claridad',
       stock: 9,
       foto: piedraCristaldeRocaImage,
-      category: "psemipreciosas"
+      category: "psemipreciosas",
+      precio: 900
     },
     {
       id: 10,
@@ -96,7 +105,8 @@ const ItemListContainer = () => {
       descripcion: 'Topacio genuino, variedad de colores disponibles',
       stock: 7,
       foto: piedraTopacioImage,
-      category: "psemipreciosas"
+      category: "psemipreciosas",
+      precio: 100
     },
   ];
   
