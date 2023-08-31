@@ -13,7 +13,7 @@ const ItemListContainer = () => {
     let q = productosCollection;
 
     if (category) {
-      q = productosCollection;
+      q = query(productosCollection, where('category', '==', category));
     }
 
     getDocs(q)
@@ -25,7 +25,9 @@ const ItemListContainer = () => {
         console.error('Error fetching products:', error);
       });
   }, [category]);
-console.log(productos)
+
+  console.log('Productos:', productos); // Muestra los productos en la consola
+
   return (
     <div>
       <ItemList productos={productos} />

@@ -8,9 +8,9 @@ const ItemDetailContainer = () => {
   const [producto, setProducto] = useState(null);
 
   useEffect(() => {
-    console.log('ID from useParams:', id); // Debugging: Check the value of ID from useParams
+    console.log('ID from useParams:', id); 
     const db = getFirestore();
-    const itemDocRef = doc(db, 'PIEDRAS', id); // Use backticks instead of single quotes
+    const itemDocRef = doc(db, 'PIEDRAS', id); 
 
     getDoc(itemDocRef)
       .then((docSnapshot) => {
