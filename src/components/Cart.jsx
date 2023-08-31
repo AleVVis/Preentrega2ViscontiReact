@@ -46,7 +46,7 @@ const Cart = () => {
       ) : (
         <VStack spacing="4" align="stretch">
           <Text>No hay productos en el carrito</Text>
-          <Link to="/category/all">
+          <Link to="/category/:category">
             <Button colorScheme="teal">Ir al catálogo</Button>
           </Link>
         </VStack>
@@ -56,9 +56,11 @@ const Cart = () => {
           <Button colorScheme="red" onClick={clearCart}>
             Borrar Carrito
           </Button>
-          <Button colorScheme="teal" onClick={handleBuy}>
-            Comprar
-          </Button>
+          <Link to="/send-order"> {/* Dirige a la Orden de Compra */}
+      <Button colorScheme="teal" onClick={handleBuy}>
+        Finalizar Compra
+      </Button>
+    </Link>
         </Stack>
       ) : null}
       {isOrderPlaced && <SendOrder orderId="ID_DE_LA_ORDEN_AQUÍ" />} {/* Pasa el ID de la orden */}

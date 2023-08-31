@@ -4,6 +4,7 @@ import { Flex } from '@chakra-ui/react'
 
 {/* Hace un map con c/u de los elementos que trae productos.
 por cada iteración que hace va a renderizar un componente nuevo */}
+
 const ItemList = ({productos}) => {
   return (
     <>
