@@ -7,7 +7,7 @@ por cada iteración que hace va a renderizar un componente nuevo */}
 const ItemList = ({productos}) => {
   return (
     <>
-    <Flex flexWrap="wrap" justifyContent="space-between" gap={20}>
+    <Flex flexWrap="wrap" justifyContent="space-between" gap={10}>
     {productos.map ((p) => {
         return (
             <Item

@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
 import { Box, Text, Button, Stack, VStack } from '@chakra-ui/react';
+import SendOrder from './SendOrder'; // Asegúrate de importar el componente SendOrder correctamente
 
 const Cart = () => {
   const { cart, removeFromCart, clearCart } = useContext(CartContext);
+  const [isOrderPlaced, setIsOrderPlaced] = useState(false); // Estado para controlar si se ha realizado la orden
 
   const handleRemoveProduct = (productId) => {
     console.log('Removing product with ID:', productId);
@@ -16,8 +18,8 @@ const Cart = () => {
   };
 
   const handleBuy = () => {
-    // Implement logic for handling the purchase
-    alert('Compra realizada');
+    // Implementa lógica para procesar la compra aquí
+    setIsOrderPlaced(true); // Establece el estado para mostrar el componente SendOrder
     clearCart();
   };
 
@@ -49,7 +51,7 @@ const Cart = () => {
           </Link>
         </VStack>
       )}
-      {cart.length > 0 && (
+      {cart.length > 0 && !isOrderPlaced ? (
         <Stack mt="4" spacing="2" direction="row" align="center">
           <Button colorScheme="red" onClick={clearCart}>
             Borrar Carrito
@@ -58,7 +60,8 @@ const Cart = () => {
             Comprar
           </Button>
         </Stack>
-      )}
+      ) : null}
+      {isOrderPlaced && <SendOrder orderId="ID_DE_LA_ORDEN_AQUÍ" />} {/* Pasa el ID de la orden */}
       <Box mt="4">
         <Text fontWeight="bold">Total: {calculateTotalPrice()}</Text>
       </Box>
@@ -67,3 +70,4 @@ const Cart = () => {
 };
 
 export default Cart;
+
